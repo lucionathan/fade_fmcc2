@@ -1,3 +1,3 @@
-# Fader 2.0
+# Como obter a skin hello kitty
 
-<img src="/output/output5.jpg" alt=""></img>
+<img src="/input/gandalfrosa.jpeg" alt="gandalf skin hello kitty"></img>

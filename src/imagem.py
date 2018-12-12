@@ -16,4 +16,5 @@ for i in range(0, 11):
     cv2.waitKey(0)
 
     cv2.imwrite(os.path.join(path, 'output' + str(i) + '.jpg'), add)
-    cv2.destroyAllWindows
+
+cv2.destroyAllWindows()
