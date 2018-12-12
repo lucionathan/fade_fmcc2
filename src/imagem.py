@@ -2,8 +2,10 @@ import cv2
 import os
 import numpy
 
-img = cv2.imread("../input/windows.jpg", 1)
-img2 = cv2.imread("../input/lixo.jpg", 1)
+img = cv2.imread("../input/gandalf.jpg", 1)
+img2 = cv2.imread("../input/gandalfrosa.jpeg", 1)
+
+img2 = cv2.resize(img2, (480, 535))
 
 path = "../output"
 
