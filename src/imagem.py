@@ -23,8 +23,7 @@ for i in range(0, 11):
 for actual in cycle(output):
     tmp = cv2.imread(actual, 1)
 
-    cv2.imshow(actual, tmp)
-    k = cv2.waitKey(2000)
+    k = cv2.waitKey(1000)
     # aperte ESC para fechar
     if k == 27:
         cv2.destroyAllWindows()
