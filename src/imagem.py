@@ -19,7 +19,7 @@ for i in range(0, 11):
     output.append(path + '/' + 'output' + str(i) + '.jpg')
 
 # Resultado:
-print(output)
+
 for actual in cycle(output):
     tmp = cv2.imread(actual, 1)
 
