@@ -1,20 +1,31 @@
 import cv2
 import os
 import numpy
+from itertools import cycle
 
 img = cv2.imread("../input/gandalf.jpg", 1)
 img2 = cv2.imread("../input/gandalfrosa.jpeg", 1)
 
 img2 = cv2.resize(img2, (480, 535))
+output = list()
 
 path = "../output"
-
+# Manipulacao:
 for i in range(0, 11):
     add = img2*(i/float(10)) + img*(1-i/float(10))
 
-    cv2.imshow("actual", add)
-    cv2.waitKey(0)
-
     cv2.imwrite(os.path.join(path, 'output' + str(i) + '.jpg'), add)
 
-cv2.destroyAllWindows()
+    output.append(path + '/' + 'output' + str(i) + '.jpg')
+
+# Resultado:
+print(output)
+for actual in cycle(output):
+    tmp = cv2.imread(actual, 1)
+
+    cv2.imshow(actual, tmp)
+    k = cv2.waitKey(2000)
+    # aperte ESC para fechar
+    if k == 27:
+        cv2.destroyAllWindows()
+        break
